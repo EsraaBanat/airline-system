@@ -6,7 +6,7 @@ a control system for an Airline (for example Royal Jordanian Airlines) where it 
 
 <br>
 
-![](./UML.jpg)
+![](./UML%20lab12.jpg)
 
 
-## [PR Link](https://github.com/EsraaBanat/airline-system/pull/1)
+## [PR Link](https://github.com/EsraaBanat/airline-system/pull/2)
