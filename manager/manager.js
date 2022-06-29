@@ -1,7 +1,8 @@
 'use strict';
 require('dotenv').config();
 const port = process.env.PORT;
-const {faker} = require('@faker-js/faker');
+const { faker } = require('@faker-js/faker');
+const uuid = require('uuid').v4;
 const io = require('socket.io-client');
 let host = `http://localhost:${port}/`;
 
@@ -12,7 +13,7 @@ const time = new Date(); // => "2022-06-21T14:52:06.086Z"
 const airlines = 'Royal Jordanian Airlines'; // => "2022-06-21T14:52:06.086Z"
 const destination = `${faker.address.city()} , ${faker.address.countryCode()}` // => "Larrymouth"
 const pilot = faker.name.findName(); // Rowan Nikolaus
-const flightID = faker.datatype.hexadecimal(10) // '0xaE13F044fb'
+const flightID = uuid(); // '0xaE13F044fb'
 
 
 setInterval(() => {
