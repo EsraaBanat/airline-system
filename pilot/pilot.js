@@ -8,6 +8,13 @@ let host = `http://localhost:${port}/airline`;
 const systemConnection = io.connect(host);
 
 
+systemConnection.emit('get_all');
+systemConnection.on('flights', (flights) => {
+    // console.log({flights});
+    console.log(`Pilot:Sorry i didn't catch this flight ID ${flights.id}`);
+    systemConnection.emit('recived', flights);
+});
+
 systemConnection.on('new-flight', handletookoff);
 systemConnection.on('new-flight', handlearrived);
 
